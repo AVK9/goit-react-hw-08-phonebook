@@ -1,0 +1,90 @@
+.formBox {
+  width: 320px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.formLabel {
+  font-size: 18px;
+  margin-top: 10px;
+}
+.boxInput {
+  position: relative;
+  width: 320px;
+  /* background-color: aquamarine; */
+}
+.iconsInput {
+  position: absolute;
+  top: 30%;
+  left: 15px;
+  width: 25px;
+  height: 25px;
+  fill: #61677c;
+}
+.boxInput:hover .iconsInput,
+.boxInput:focus .iconsInput {
+  fill: #ae1100;
+}
+
+button,
+input {
+  border: 0;
+  outline: 0;
+  font-size: 16px;
+  border-radius: 25px;
+  height: 53px;
+  background-color: #ebecf0;
+  text-shadow: 1px 1px 0 #fff;
+  width: 100%;
+}
+label {
+  margin-bottom: 5px;
+  width: 100%;
+}
+input {
+  box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+  appearance: none;
+  -webkit-appearance: none;
+  padding-left: 50px;
+}
+input:focus {
+  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+}
+button {
+  color: #61677c;
+  font-weight: bold;
+  box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  font-weight: 600;
+}
+button:hover {
+  box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
+}
+button:active {
+  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+}
+
+.btnAddContact {
+  margin-top: 30px;
+  border-radius: 28px;
+  line-height: 0;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  color: #ae1100;
+}
+.icons {
+  fill: #ae1100;
+  width: 20px;
+  height: 20px;
+}

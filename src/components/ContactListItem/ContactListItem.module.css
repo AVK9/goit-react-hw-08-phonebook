@@ -1,0 +1,53 @@
+.buttonDel {
+  border: 0;
+  outline: 0;
+  background-color: #ebecf0;
+  text-shadow: 1px 1px 0 #fff;
+  width: 100px;
+  color: #61677c;
+  box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  font-weight: 100;
+  border-radius: 28px;
+  line-height: 0;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+button:hover {
+  box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
+}
+button:active {
+  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+}
+.contactItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  margin-bottom: 10px;
+  font-size: 16px;
+  text-shadow: 1px 1px 0 #fff;
+  color: #61677c;
+}
+
+.contactItem:hover,
+.buttonDel:hover {
+  color: #ae1100;
+}
+
+.icons {
+  fill: #61677c;
+  width: 18px;
+  height: 18px;
+}
+
+.buttonDel:hover .icons,
+.buttonDel:hover .contactItem {
+  fill: #ae1100;
+  color: #ae1100;
+}
