@@ -1,0 +1,33 @@
+.nameText2 {
+  margin-top: 40px;
+  font-size: 20px;
+  text-align: center;
+  color: rgb(192, 192, 192);
+}
+.textBoxReg {
+  margin-top: 10px;
+  /* text-align: center; */
+}
+.textBox2 {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.nameText2:hover {
+  scale: 1.05;
+  color: #ae1100;
+  transition: all 0.3s ease-in-out;
+  /* text-decoration: underline; */
+  background: linear-gradient(to left, #ae1100, #f9dd94 100%);
+  background-position: 0 100%;
+  background-size: 100% 2px;
+  background-repeat: repeat-x;
+}
+.boxForm {
+  /* border: #ffffff 1px solid; */
+  padding: 15px;
+  box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
+  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+  border-radius: 25px;
+  /* background-color: #ae1100; */
+}

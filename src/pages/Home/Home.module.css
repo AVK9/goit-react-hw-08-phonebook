@@ -1,0 +1,38 @@
+.boxHome {
+  margin-top: 50px;
+  background-image: url('../../components/img/phonebook.svg');
+  background-size: 360px auto;
+  height: 360px;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  gap: 170px;
+  flex-wrap: nowrap;
+  align-items: center;
+  font-weight: 700;
+  font-size: 25px;
+}
+.icons {
+  padding-top: 7px;
+  width: 22px;
+
+  fill: #5f5f5f;
+}
+.btnEnterBook {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-direction: row;
+  align-items: center;
+  border: #5f5f5f 2px solid;
+  height: 40px;
+  width: 150px;
+  border-radius: 30px;
+}
+.headerName {
+  color: #494949;
+}
+.btnEnterBook:hover {
+  transition: all 0.1s ease-in-out;
+  scale: 1.05;
+}
