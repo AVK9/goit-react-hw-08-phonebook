@@ -1,7 +1,7 @@
 import React from 'react';
 import css from './Home.module.css';
 import { Title } from 'components/Title/Title';
-import Header from 'components/Header/Header';
+// import Header from 'components/Header/Header';
 import { Link } from 'react-router-dom';
 import { Icon } from 'components/img/Icon';
 // import imagePhonebook from '../../components/img/phonebook.svg';
