@@ -1,21 +1,14 @@
 import { useState } from 'react';
 import css from './RegistrationForm.module.css';
 import { Icon } from '../img/Icon';
-import { useDispatch, useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
-import { nanoid } from '@reduxjs/toolkit';
-import { addContactThunk } from 'services/getContact';
 import { IMaskInput } from 'react-imask';
-import { selectContacts } from 'store/selectors';
 
-export function RegistrationForm() {
+export function RegistrationForm({ register }) {
   const [showPassword, setShowPassword] = useState(false);
   const [nameContact, setNameContact] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const dispatch = useDispatch();
-  const contacts = useSelector(selectContacts);
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const handleChange = e => {
     const { name, value } = e.target;
 
@@ -36,36 +29,17 @@ export function RegistrationForm() {
 
   const handleSubmit = e => {
     e.preventDefault();
-    checkName(nameContact);
+    checkData();
   };
 
-  const checkName = nameContact => {
-    const findName = contact =>
-      contact.name.toLowerCase() === nameContact.toLowerCase();
-    if (contacts.length && contacts.some(findName)) {
-      return toast.warn(`${nameContact} is already in contacts.`);
-      // alert(`${name} is already in contacts`);
-    }
-    if (!emailPattern.test(email)) {
-      return toast.warn('Pleasure input corect email');
+  const checkData = () => {
+    if (password.length < 7) {
+      return alert('Password must have been 7 charge');
+      //  toast.warn('Password must have been 6 charge');
     } else {
-      dispatch(
-        addContactThunk({
-          name: nameContact,
-          email: email,
-          password: password,
-          id: nanoid(),
-        })
-      );
-      console.log('!emailPattern.test(email) :>> ', emailPattern.test(email));
-      console.log('NeWWWWWWWWWWW :>> ', {
-        name: nameContact,
-        email: email,
-        password: password,
-        id: nanoid(),
-      });
-      console.log('HELLO');
-      console.log('number :>> ');
+      const data = { name: nameContact, email, password };
+      register(data);
+
       reset();
     }
   };

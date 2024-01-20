@@ -9,7 +9,9 @@ import { Icon } from 'components/img/Icon';
 const Home = () => {
   return (
     <div className={css.boxHome}>
-      <Title text="Phonebook" />
+      <Link to="/contacts">
+        <Title text="Phonebook" />
+      </Link>
       <div className={css.btnEnterBook}>
         <Link to="/login">
           <Icon id="enter" className={css.icons} />

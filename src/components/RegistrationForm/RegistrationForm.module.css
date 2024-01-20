@@ -119,3 +119,10 @@ button:active {
   fill: #ae1100;
   transition: all 0.3s ease-in-out;
 }
+
+input::-moz-placeholder {
+  color: rgb(170, 170, 170);
+}
+input::-webkit-input-placeholder {
+  color: rgb(170, 170, 170);
+}
