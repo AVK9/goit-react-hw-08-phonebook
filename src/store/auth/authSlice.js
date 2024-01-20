@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { loginOutThunk, loginThunk, refreshThunk, signUpThunk } from "./authThunk";
-import { handleFulfilled, handleLogin, handleLoginOut, handlePending, handleRefresh, handleRejected, handleSignUp } from "./handlers";
+import { handleFulfilled, handleLoginOut, handlePending, handleRefresh, handleRejected, handleSignUp } from "./handlers";
 const initialState = {
     isLoading: false,
     error: '',

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import css from './RegistrationForm.module.css';
 import { Icon } from '../img/Icon';
-import { toast } from 'react-toastify';
+// import { toast } from 'react-toastify';
 import { IMaskInput } from 'react-imask';
 
 export function RegistrationForm({ register }) {

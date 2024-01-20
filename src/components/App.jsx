@@ -13,14 +13,14 @@ const Login = lazy(() => import('pages/Login/Login'));
 const Phonebook = lazy(() => import('pages/Phonebook'));
 
 export const App = () => {
-  // const profile = useSelector(profileSelector);
-  // const token = useSelector(isAuthSelector);
+  const profile = useSelector(profileSelector);
+  const token = useSelector(isAuthSelector);
 
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(refreshThunk());
-  }, [dispatch]);
-  //token && !profile && token &&
+    !profile && token && dispatch(refreshThunk());
+  }, [dispatch, profile, token]);
+  // !profile && token &&
   return (
     <Suspense fallback={<Loader />}>
       <Routes>
