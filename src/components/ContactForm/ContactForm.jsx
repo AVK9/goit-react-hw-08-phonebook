@@ -4,7 +4,7 @@ import { Icon } from '../img/Icon';
 import { IMaskInput } from 'react-imask';
 import { useDispatch, useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
-import { nanoid } from '@reduxjs/toolkit';
+
 // import { addContactThunk } from 'services/getContact';
 import { addContactThunk } from 'store/contacts/contactsThunk';
 import { selectContacts } from 'store/selectors';
