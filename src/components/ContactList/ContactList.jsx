@@ -15,10 +15,13 @@ export const ContactList = () => {
   const error = useSelector(selectError);
 
   const contacts = useSelector(selectVisibleContacts);
+  // const contacts2 = useSelector(selectStateContacts);
+
+  // console.log('contacts111 :>> ', contacts2);
 
   useEffect(() => {
     dispatch(getContactThunk());
-    console.log('contacts999 :>> ', contacts);
+    // console.log('contacts999 :>> ', contacts);
   }, [dispatch]);
 
   return (
