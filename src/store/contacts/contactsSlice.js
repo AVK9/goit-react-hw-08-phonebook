@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { handleFulfilled, handlePending, handleRejected } from "../auth/handlers";
-import { handleGetContact } from "../contacts/handlers";
-import { addContactThunk, getContactThunk } from "./contactsThunk";
+import { handleDelContact, handleGetContact } from "./contactsHandlers";
+import { addContactThunk, delContactThunk, getContactThunk } from "./contactsThunk";
 const initialState = {
     contacts: [],
     isLoading: false,
@@ -14,7 +14,7 @@ const contactsSlice = createSlice({
         builder
           .addCase(getContactThunk.fulfilled, handleGetContact)
           .addCase(addContactThunk.fulfilled, handleGetContact)
-            
+          .addCase(delContactThunk.fulfilled, handleDelContact)
           .addMatcher(({type}) => type.endsWith('/pendihg'), handlePending)
           .addMatcher(({type})=> type.endsWith('/fulfilled'), handleFulfilled)
           .addMatcher(({type})=> type.endsWith('/rejected'), handleRejected)

@@ -1,4 +1,9 @@
+
 import { api } from "./api"
+
+export const setTokenApi = (token) => {
+    api.defaults.headers.common['Authorization'] = token;
+}
 
 export const signUpApi = async (body) => {
     const { data } = await api.post('/users/signup', body)

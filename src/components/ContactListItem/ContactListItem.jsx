@@ -1,22 +1,20 @@
 import css from './ContactListItem.module.css';
 import { Icon } from '../img/Icon';
 import { useDispatch } from 'react-redux';
-import { delContactThunk } from 'services/getContact';
+import { delContactThunk } from 'store/contacts/contactsThunk';
 
-export const ContactListItem = ({ name, phone, id }) => {
+export const ContactListItem = ({ name, number, id }) => {
   const dispatch = useDispatch();
-  const handleDel = () => {
-    dispatch(delContactThunk(id));
-    console.log(id);
-  };
 
   return (
     <li className={css.contactItem}>
       <span>{name}</span>
-      <span>{phone}</span>
-      <button className={css.buttonDel} onClick={handleDel}>
+      <span>{number}</span>
+      <button
+        className={css.buttonDel}
+        onClick={() => dispatch(delContactThunk(id))}
+      >
         <Icon id="user-minus" className={css.icons} />
-        {/* <i className={css.icon} class="icon ion-md-trash"></i> */}
         Delete
       </button>
     </li>

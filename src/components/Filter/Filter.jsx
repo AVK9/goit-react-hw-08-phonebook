@@ -3,7 +3,7 @@ import { Icon } from '../img/Icon';
 import { useDispatch } from 'react-redux';
 
 import { useState } from 'react';
-import { filterContactAction } from 'store/sliceFilter';
+import { filterContactAction } from 'store/contacts/sliceFilter';
 export const Filter = () => {
   const [value, setValue] = useState('');
   const dispatch = useDispatch();

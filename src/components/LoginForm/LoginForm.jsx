@@ -13,9 +13,6 @@ export function LoginForm({ login }) {
       email: email.value,
       password: password.value,
     });
-    // {
-    //   (email = ''), (password = '');
-    // }
   };
 
   return (

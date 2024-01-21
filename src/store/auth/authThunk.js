@@ -1,5 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { loginApi, loginOutApi, refreshApi, signUpApi } from "services/auth";
+import {loginApi, loginOutApi, refreshApi, setTokenApi, signUpApi } from "services/authApi";
+
 
 
 export const signUpThunk = createAsyncThunk(
@@ -37,9 +38,11 @@ export const refreshThunk = createAsyncThunk(
 
 export const loginOutThunk = createAsyncThunk(
     'auth/loginOut',
-    async (_, { rejectWithValue} ) => {
+    async (_, { rejectWithValue, getState} ) => {
         try {
-            return await loginOutApi()
+            setTokenApi(getState().auth.token)
+            await loginOutApi();
+
         } catch (error) {
             return rejectWithValue(error.response.data.error)
         }

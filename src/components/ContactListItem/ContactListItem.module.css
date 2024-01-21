@@ -4,6 +4,7 @@
   background-color: #ebecf0;
   text-shadow: 1px 1px 0 #fff;
   width: 100px;
+  max-width: 100px;
   color: #61677c;
   box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
   transition: all 0.2s ease-in-out;

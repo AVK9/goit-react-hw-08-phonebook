@@ -3,7 +3,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { isAuthSelector, profileSelector } from 'store/auth/selectors';
 import { loginOutThunk } from 'store/auth/authThunk';
-import { api } from 'services/api';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 
@@ -12,7 +11,7 @@ const UserMenu = () => {
   const navigate = useNavigate();
   const profile = useSelector(profileSelector);
   const token = useSelector(isAuthSelector);
-  api.defaults.headers.common['Authorization'] = token;
+  // api.defaults.headers.common['Authorization'] = token;
   console.log('profile :>> ', profile);
   console.log('token :>> ', token);
   useEffect(() => {
@@ -20,11 +19,11 @@ const UserMenu = () => {
   }, [profile, navigate]);
   return (
     <div>
-      <div>
-        {/* <Icon id="user" className={css.iconsInput} /> */}
-        {profile && profile.name}
-      </div>
-      <button onClick={() => dispatch(loginOutThunk())}>Logout</button>
+      <div>{/* <Icon id="user" className={css.iconsInput} /> */}</div>
+      <button onClick={() => dispatch(loginOutThunk())}>
+        {profile && profile.name} <br />
+        Logout
+      </button>
     </div>
   );
 };
