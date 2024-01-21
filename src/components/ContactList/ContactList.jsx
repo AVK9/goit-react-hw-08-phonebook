@@ -1,7 +1,8 @@
 import css from './ContactList.module.css';
 import { ContactListItem } from '../ContactListItem/ContactListItem';
 import { useDispatch, useSelector } from 'react-redux';
-import { getContactThunk } from 'services/getContact';
+// import { getContactThunk } from 'services/getContact';
+import { getContactThunk } from 'store/contacts/contactsThunk';
 import { useEffect } from 'react';
 import {
   selectError,

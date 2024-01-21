@@ -5,7 +5,8 @@ import { IMaskInput } from 'react-imask';
 import { useDispatch, useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
 import { nanoid } from '@reduxjs/toolkit';
-import { addContactThunk } from 'services/getContact';
+// import { addContactThunk } from 'services/getContact';
+import { addContactThunk } from 'store/contacts/contactsThunk';
 import { selectContacts } from 'store/selectors';
 
 export function ContactForm() {
@@ -45,7 +46,8 @@ export function ContactForm() {
       return toast.warn('Pleasure input number phome');
     } else {
       dispatch(
-        addContactThunk({ name: nameContact, phone: number, id: nanoid() })
+        // addContactThunk({ name: nameContact, phone: number, id: nanoid() })
+        addContactThunk({ name: nameContact, number })
       );
       console.log('HELLO');
       console.log('number :>> ');

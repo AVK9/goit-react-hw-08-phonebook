@@ -37,9 +37,9 @@ export const refreshThunk = createAsyncThunk(
 
 export const loginOutThunk = createAsyncThunk(
     'auth/loginOut',
-    async (_, { rejectWithValue, getState} ) => {
+    async (_, { rejectWithValue} ) => {
         try {
-            return await loginOutApi(getState().auth.token)
+            return await loginOutApi()
         } catch (error) {
             return rejectWithValue(error.response.data.error)
         }
