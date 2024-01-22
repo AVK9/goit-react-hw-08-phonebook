@@ -1,0 +1,54 @@
+.userBox {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.iconsInput {
+  width: 20px;
+  height: 20px;
+}
+
+.userBoxCard {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%px;
+  /* background-color: rgb(248, 248, 248); */
+}
+.Buttoon {
+  background-color: #ebecf0;
+  text-shadow: 1px 1px 0 #fff;
+  width: 100px;
+  color: #61677c;
+  box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  font-weight: 100;
+  border-radius: 28px;
+  line-height: 0;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+.Buttoon:hover {
+  box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
+}
+.Buttoon:active {
+  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+}
+
+.iconsInput {
+  animation: a1 1s ease-in-out 0s infinite;
+  fill: #61677c;
+}
+
+@keyframes a1 {
+  0% {
+    fill: #61677c;
+    stroke: #61677c;
+  }
+}

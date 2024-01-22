@@ -1,10 +1,10 @@
-// import { Icon } from 'components/img/Icon';
-// import css from './UserMenu.modal.css';
+import css from './UserMenu.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { isAuthSelector, profileSelector } from 'store/auth/selectors';
 import { loginOutThunk } from 'store/auth/authThunk';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
+import { Icon } from 'components/img/Icon';
 
 const UserMenu = () => {
   const dispatch = useDispatch();
@@ -18,12 +18,16 @@ const UserMenu = () => {
     !profile && navigate('/');
   }, [profile, navigate]);
   return (
-    <div>
-      <div>{/* <Icon id="user" className={css.iconsInput} /> */}</div>
-      <button onClick={() => dispatch(loginOutThunk())}>
-        {profile && profile.name} <br />
+    <div className={css.userBox}>
+      <div className={css.userBoxCard}>
+        <Icon id="user" className={css.iconsInput} />
+      </div>
+
+      <div className={css.loginShine}>{profile && profile.name}</div>
+
+      <div onClick={() => dispatch(loginOutThunk())} className={css.Buttoon}>
         Logout
-      </button>
+      </div>
     </div>
   );
 };

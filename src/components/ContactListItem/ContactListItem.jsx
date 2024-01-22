@@ -10,13 +10,13 @@ export const ContactListItem = ({ name, number, id }) => {
     <li className={css.contactItem}>
       <span>{name}</span>
       <span>{number}</span>
-      <button
+      <div
         className={css.buttonDel}
         onClick={() => dispatch(delContactThunk(id))}
       >
         <Icon id="user-minus" className={css.icons} />
         Delete
-      </button>
+      </div>
     </li>
   );
 };
