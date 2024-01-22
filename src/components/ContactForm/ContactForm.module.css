@@ -88,3 +88,9 @@ button:active {
   width: 20px;
   height: 20px;
 }
+input::-moz-placeholder {
+  color: rgb(170, 170, 170);
+}
+input::-webkit-input-placeholder {
+  color: rgb(170, 170, 170);
+}
