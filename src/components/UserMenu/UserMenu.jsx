@@ -23,7 +23,7 @@ const UserMenu = () => {
         <Icon id="user" className={css.iconsInput} />
       </div>
 
-      <div className={css.loginShine}>{profile && profile.name}</div>
+      <div className={css.loginShine}>{profile && profile.email}</div>
 
       <div onClick={() => dispatch(loginOutThunk())} className={css.Buttoon}>
         Logout
